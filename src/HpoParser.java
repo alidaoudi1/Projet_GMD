@@ -6,7 +6,7 @@ public class HpoParser {
 
 	public static void main( String [] args ) throws IOException{
 
-		FileReader file = new FileReader("/home/soufiane/workspace/GMD/hp.obo");			
+		FileReader file = new FileReader("hp.obo");			
 		BufferedReader reader = new BufferedReader(file);
 
 		Scanner sc = new Scanner(System.in);
@@ -18,8 +18,8 @@ public class HpoParser {
 
 		String delims = "[ ]+";
 
-		ArrayList<String> Name = new ArrayList();
-		ArrayList<String> Id = new ArrayList<String>();
+		ArrayList<String> names = new ArrayList();
+		ArrayList<String> ids = new ArrayList<String>();
 
 		while ((line = reader.readLine()) != null){
 
@@ -36,7 +36,7 @@ public class HpoParser {
 					line = line.trim();
 					String[] tokens = line.split(delims);
 					id = tokens[1];
-					Id.add(id);
+					ids.add(id);
 					line = reader.readLine();					
 				}
 				if (line.contains("is_anonymous: true")){
@@ -50,21 +50,21 @@ public class HpoParser {
 					for (int i = 1; i < tokens.length; i++){
 						name = name + tokens[i] + " ";
 					}
-					Name.add(name);
+					names.add(name);
 
 
 				}
 				if (idFound){
-					Name.add(name);
+					names.add(name);
 				}
 
 			}
 
 		}
 
-		for (int i = 0; i < Name.size(); i++){
-			if (Name.get(i).toLowerCase().contains(symptom)){
-				System.out.println(Name.get(i) + " || " + Id.get(i));
+		for (int i = 0; i < names.size(); i++){
+			if (names.get(i).toLowerCase().contains(symptom)){
+				System.out.println(names.get(i) + " || " + ids.get(i));
 			}
 		}
 
