@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Results2Controller">
+   <children>
+      <Text fx:id="txt" strokeType="OUTSIDE" strokeWidth="0.0" text="cc" StackPane.alignment="TOP_CENTER">
+         <StackPane.margin>
+            <Insets top="50.0" />
+         </StackPane.margin>
+      </Text>
+      <ListView fx:id="list3" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#hit3" prefHeight="450.0" prefWidth="700.0" translateY="50.0" />
+   </children>
+</StackPane>

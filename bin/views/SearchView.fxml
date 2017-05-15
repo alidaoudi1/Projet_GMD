@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="st" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchController">
+   <children>
+      <TextField fx:id="Bar" alignment="CENTER" maxWidth="-Infinity" pickOnBounds="false" prefHeight="31.0" prefWidth="500.0" promptText="Enter your symptoms" translateY="120.0" />
+      <Button fx:id="Bouton" mnemonicParsing="false" onAction="#Hit" text="Start Engine" translateY="200.0" />
+   </children>
+</StackPane>
